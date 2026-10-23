@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Interativa - Som em Multimídia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AudioLab</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="introducao.html">Conceitos</a></li>
+                <li><a href="sonoplastia.html">Sonoplastia</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="autor.html">Autoria</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h1>Galeria e Interatividade de Áudio</h1>
+            <p>Ouça o exemplo de áudio abaixo reproduzido nativamente ou controlado por JavaScript:</p>
+            <br>
+            <button id="btn-play-audio">Tocar / Pausar Áudio</button>
+            <div class="media-container">
+                <audio id="custom-audio" controls>
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+        </section>
+
+        <section class="card">
+            <h1>Interatividade com Imagem</h1>
+            <p>Clique na imagem abaixo para aplicar um efeito dinâmico de zoom:</p>
+            <div class="media-container">
+                <img id="interactive-img" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop" alt="Equipamento de Som Interativo" style="cursor: pointer;">
+            </div>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 - Multimídia e Hipermídia</p></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
