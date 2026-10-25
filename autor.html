@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autoria - Som em Multimídia</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .interactive-box {
+            background: linear-gradient(135deg, #2a2a36, #121214);
+            border: 2px dashed #00ffcc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        .interactive-box:hover {
+            background: linear-gradient(135deg, #00ffcc, #121214);
+            color: #121214;
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,10 +46,19 @@
         </section>
         
         <section class="card">
+            <h2>Módulo Dinâmico: Simulação de Frequência 3D</h2>
+            <p>Sob a ótica de IHC, elementos visuais reativos respondem ao input do usuário. Clique na caixa abaixo para simular uma alteração de frequência e estado visual interativo:</p>
+            <div class="interactive-box" id="box-autor">
+                <h3>[ Clique para Ativar Resposta de Frequência ]</h3>
+                <p>Simula o comportamento de um objeto virtual reativo ao som.</p>
+            </div>
+        </section>
+
+        <section class="card">
             <h2>Processo de Criação (Critério da Avaliação)</h2>
-            <p><strong>Tipo de mídia:</strong> Gráfico / Arte Digital Conceitual.</p>
-            <p><strong>Ferramentas utilizadas:</strong> Gerador de Imagens por Inteligência Artificial e editor gráfico para ajustes de proporção.</p>
-            <p><strong>Como foi criada:</strong> A mídia foi produzida por mim através da elaboração de um prompt textual descritivo detalhado focado em ondas sonoras abstratas e tecnologia multimídia. Após a geração, realizei o tratamento e redimensionamento do arquivo para otimizar o carregamento e garantir a harmonia visual no layout responsivo do site.</p>
+            <p><strong>Tipo de mídia:</strong> Gráfico / Arte Digital Conceitual e Componente Interativo.</p>
+            <p><strong>Ferramentas utilizadas:</strong> Gerador de Imagens por Inteligência Artificial, HTML5, CSS3 e manipulação de DOM via JavaScript.</p>
+            <p><strong>Como foi criada:</strong> A mídia visual foi produzida por mim através de prompt descritivo detalhado focado em ondas sonoras abstratas. Adicionalmente, desenvolvi um componente interativo em código para demonstrar feedback multissensorial exigido em projetos de sistemas multimídia.</p>
         </section>
     </main>
     <footer><p>&copy; 2026 - Multimídia e Hipermídia</p></footer>

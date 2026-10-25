@@ -69,3 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+    // Efeito interativo na página de Autoria (Simulação de Frequência)
+    const boxAutor = document.getElementById('box-autor');
+    if (boxAutor) {
+        boxAutor.addEventListener('click', () => {
+            boxAutor.style.background = '#00ffcc';
+            boxAutor.style.color = '#121214';
+            boxAutor.querySelector('h3').textContent = '[ Frequência Ativa: Sinal Modificado! ]';
+            setTimeout(() => {
+                boxAutor.style.background = '';
+                boxAutor.style.color = '';
+                boxAutor.querySelector('h3').textContent = '[ Clique para Ativar Resposta de Frequência ]';
+            }, 1000);
+        });
+    }
+

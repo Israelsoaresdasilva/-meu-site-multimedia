@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Interativa - Som em Multimídia</title>
+    <title>Galeria - Som em Multimídia</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,23 +21,28 @@
     </header>
     <main>
         <section class="card">
-            <h1>Galeria e Interatividade de Áudio</h1>
-            <p>Ouça o exemplo de áudio abaixo reproduzido nativamente ou controlado por JavaScript:</p>
-            <br>
-            <button id="btn-play-audio">Tocar / Pausar Áudio</button>
-            <div class="media-container">
-                <audio id="custom-audio" controls>
-                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-                    Seu navegador não suporta áudio.
-                </audio>
-            </div>
+            <h1>Galeria de Mídias e Interações</h1>
+            <p>Explore abaixo os exemplos de áudio customizado e imagens interativas integradas ao projeto.</p>
         </section>
 
         <section class="card">
-            <h1>Interatividade com Imagem</h1>
-            <p>Clique na imagem abaixo para aplicar um efeito dinâmico de zoom:</p>
-            <div class="media-container">
-                <img id="interactive-img" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop" alt="Equipamento de Som Interativo" style="cursor: pointer;">
+            <h2>Exemplo 1: Player de Áudio Nativo com Controle JS</h2>
+            <p>Utilize os controles abaixo para reproduzir a faixa de áudio e testar o botão interativo programado via JavaScript:</p>
+            <br>
+            <audio id="custom-audio" controls style="width: 100%;">
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Seu navegador não suporta a tag de áudio.
+            </audio>
+            <br><br>
+            <button id="btn-play-audio">Tocar / Pausar via JS</button>
+        </section>
+
+        <section class="card">
+            <h2>Exemplo 2: Galeria Visual com Zoom Dinâmico</h2>
+            <p>Clique na imagem abaixo para testar o efeito de zoom interativo via JavaScript (IHC):</p>
+            <div class="media-container" style="text-align: center; margin-top: 15px;">
+                <img id="interactive-img" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop" alt="Espectro Sonoro e Show de Luzes" style="width: 100%; border-radius: 8px; cursor: pointer;">
+                <p style="font-size: 0.85rem; color: #a1a1aa; margin-top: 8px;">(Clique na imagem para aplicar zoom)</p>
             </div>
         </section>
     </main>
