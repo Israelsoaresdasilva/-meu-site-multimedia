@@ -8,10 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Gerador de Frequência (Web Audio API)
+    // Gerador de Frequência (Web Audio API) com Feedback Visual de IHC
     const btnBeep = document.getElementById('btn-beep');
     if (btnBeep) {
         btnBeep.addEventListener('click', () => {
+            // Efeito visual de IHC (Feedback imediato na interface)
+            btnBeep.style.backgroundColor = '#00ffcc';
+            btnBeep.style.color = '#121214';
+            setTimeout(() => {
+                btnBeep.style.backgroundColor = '';
+                btnBeep.style.color = '';
+            }, 500);
+
+            // Execução do áudio via Web Audio API
             const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             const oscillator = audioCtx.createOscillator();
             const gainNode = audioCtx.createGain();
@@ -30,42 +39,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnTheme) {
         btnTheme.addEventListener('click', () => {
             document.body.classList.toggle('light-theme');
-            if (document.body.classList.contains('light-theme')) {
-                document.body.style.backgroundColor = '#f8f9fa';
-                document.body.style.color = '#212529';
-            } else {
-                document.body.style.backgroundColor = '#121214';
-                document.body.style.color = '#e1e1e6';
-            }
         });
     }
 
-    // Interatividade com Imagem (Zoom ao clicar - Ação JS)
+    // Interatividade com Imagem (Zoom)
     const interactiveImg = document.getElementById('interactive-img');
     if (interactiveImg) {
         let zoomed = false;
         interactiveImg.addEventListener('click', () => {
             zoomed = !zoomed;
-            if (zoomed) {
-                interactiveImg.style.transform = 'scale(1.15)';
-                interactiveImg.style.transition = 'transform 0.3s ease';
-            } else {
-                interactiveImg.style.transform = 'scale(1)';
-            }
+            interactiveImg.style.transform = zoomed ? 'scale(1.15)' : 'scale(1)';
+            interactiveImg.style.transition = 'transform 0.3s ease';
         });
     }
 
-    // Interatividade com Áudio (Botão customizado para tocar via JS)
+    // Áudio Interativo
     const btnPlayAudio = document.getElementById('btn-play-audio');
     const customAudio = document.getElementById('custom-audio');
     if (btnPlayAudio && customAudio) {
         btnPlayAudio.addEventListener('click', () => {
             if (customAudio.paused) {
                 customAudio.play();
-                btnPlayAudio.textContent = 'Pausar Áudio Interativo';
+                btnPlayAudio.textContent = 'Pausar Áudio';
             } else {
                 customAudio.pause();
-                btnPlayAudio.textContent = 'Tocar Áudio Interativo';
+                btnPlayAudio.textContent = 'Tocar Áudio';
             }
         });
     }
